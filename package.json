@@ -7,6 +7,12 @@
     "type": "git",
     "url": "git+https://github.com/JoostKersjes/broet.git"
   },
+  "scripts": {
+    "format": "prettier -uw --cache ."
+  },
+  "devDependencies": {
+    "prettier": "^3.0.3"
+  },
   "keywords": [
     "broet"
   ]
