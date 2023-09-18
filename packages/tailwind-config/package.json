@@ -1,0 +1,15 @@
+{
+  "name": "@broet/tailwind-config",
+  "author": "Joost Kersjes",
+  "version": "0.0.1",
+  "main": "broet-tailwind-config.js",
+  "type": "commonjs",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  },
+  "keywords": [
+    "tailwind",
+    "config",
+    "broet"
+  ]
+}

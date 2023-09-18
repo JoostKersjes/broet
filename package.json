@@ -1,0 +1,13 @@
+{
+  "name": "@broet/monorepo",
+  "description": "Some libaries for building Vue & Vite apps",
+  "author": "Joost Kersjes",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoostKersjes/broet.git"
+  },
+  "keywords": [
+    "broet"
+  ]
+}
