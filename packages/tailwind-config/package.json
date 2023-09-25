@@ -2,8 +2,8 @@
   "name": "@broet/tailwind-config",
   "author": "Joost Kersjes",
   "version": "0.0.0",
-  "main": "broet-tailwind-config.js",
-  "type": "commonjs",
+  "main": "tailwind.config.js",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JoostKersjes/broet.git",
