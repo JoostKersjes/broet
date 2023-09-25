@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/vue3";
 import FormGroup from "./FormGroup.vue";
 
 const meta: Meta<typeof FormGroup> = {
-  title: "Atom/Form/Group",
+  title: "Atoms/Form/Group",
   component: FormGroup,
 };
 

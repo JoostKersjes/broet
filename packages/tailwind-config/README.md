@@ -10,5 +10,4 @@ export default {
   ...broetConfig,
   content: ["./src/**/*.{vue,js,ts,jsx,tsx}"],
 };
-
 ```
