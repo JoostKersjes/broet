@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "main": "tailwind.config.js",
   "type": "module",
+  "types": "config.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JoostKersjes/broet.git",
