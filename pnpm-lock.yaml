@@ -41,6 +41,9 @@ importers:
 
   packages/ui:
     devDependencies:
+      '@broet/storybook-theming-tailwind':
+        specifier: workspace:0.1.0
+        version: link:../storybook-theming-tailwind
       '@broet/tailwind-config':
         specifier: workspace:0.0.0
         version: link:../tailwind-config
@@ -62,9 +65,15 @@ importers:
       '@storybook/blocks':
         specifier: ^7.4.5
         version: 7.4.5(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/manager-api':
+        specifier: ^7.4.5
+        version: 7.4.5(react-dom@18.2.0)(react@18.2.0)
       '@storybook/testing-library':
         specifier: ^0.2.1
         version: 0.2.1
+      '@storybook/theming':
+        specifier: ^7.4.5
+        version: 7.4.5(react-dom@18.2.0)(react@18.2.0)
       '@storybook/vue3':
         specifier: ^7.4.5
         version: 7.4.5(@vue/compiler-core@3.3.4)(vue@3.3.4)
@@ -119,6 +128,9 @@ importers:
       storybook:
         specifier: ^7.4.5
         version: 7.4.5
+      storybook-dark-mode:
+        specifier: ^3.0.1
+        version: 3.0.1(react-dom@18.2.0)(react@18.2.0)
       tailwindcss:
         specifier: ^3.3.3
         version: 3.3.3
@@ -2810,6 +2822,36 @@ packages:
       - '@types/react-dom'
     dev: true
 
+  /@storybook/addons@7.4.5(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-jmdQf39XhwVi8d0J99qpk51fOAwNhYlCtVctvFWPX4qC1cq1d1pxLmTb5OBV2VHQ11BKwlKLzA7coiOgAQmNRg==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@storybook/manager-api': 7.4.5(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/preview-api': 7.4.5
+      '@storybook/types': 7.4.5
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: true
+
+  /@storybook/api@7.4.5(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-NpdW54D/fG0QOHtzjMDEG9+zKjmdq1GdsfVX2YEA7s9vq9FTKpnhNSifphEmDEKzwIm64euRj7FEz8mUPbh27Q==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-dom:
+        optional: true
+    dependencies:
+      '@storybook/client-logger': 7.4.5
+      '@storybook/manager-api': 7.4.5(react-dom@18.2.0)(react@18.2.0)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: true
+
   /@storybook/blocks@7.4.5(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-FhAIkCT2HrzJcKsC3mL5+uG3GrbS23mYAT1h3iyPjCliZzxfCCI9UCMUXqYx4Z/FmAGJgpsQQXiBFZuoTHO9aQ==}
     peerDependencies:
@@ -3371,7 +3413,7 @@ packages:
       ts-dedent: 2.2.0
       type-fest: 2.19.0
       vue: 3.3.4
-      vue-component-type-helpers: 1.8.14
+      vue-component-type-helpers: 1.8.15
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -8343,6 +8385,32 @@ packages:
     resolution: {integrity: sha512-siT1RiqlfQnGqgT/YzXVUNsom9S0H1OX+dpdGN1xkyYATo4I6sep5NmsRD/40s3IIOvlCq6akxkqG82urIZW1w==}
     dev: true
 
+  /storybook-dark-mode@3.0.1(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-3V6XBhkUq63BF6KzyDBbfV5/8sYtF4UtVccH1tK+Lrd4p0tF8k7yHOvVDhFL9hexnKXcLEnbC+42YDTPvjpK+A==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-dom:
+        optional: true
+    dependencies:
+      '@storybook/addons': 7.4.5(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/api': 7.4.5(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/components': 7.4.5(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/core-events': 7.4.5
+      '@storybook/global': 5.0.0
+      '@storybook/theming': 7.4.5(react-dom@18.2.0)(react@18.2.0)
+      fast-deep-equal: 3.1.3
+      memoizerific: 1.11.3
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    transitivePeerDependencies:
+      - '@types/react'
+      - '@types/react-dom'
+    dev: true
+
   /storybook@7.4.5:
     resolution: {integrity: sha512-J7fidphTJ6SJHlR8f/USQE30K6ipbynLVLsTOz0bNYW/0Ua2t9u6dAYGbbq6bLikl3zxzQbdm9lXMUzmaYAdIA==}
     hasBin: true
@@ -9183,8 +9251,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /vue-component-type-helpers@1.8.14:
-    resolution: {integrity: sha512-veuaNIJas+dkRflRumpnY0e0HWqrUrqg5CdWxK/CbQvJ96V4uVOM5eJbj6cJX3rFNmc7+LO3ySHwvKVS8DjG5w==}
+  /vue-component-type-helpers@1.8.15:
+    resolution: {integrity: sha512-RKiPRKW4BdwgmQ9vaNkHYKAThdTbgU4TOphVyyzqxRwsOJOoRIrb+vB49XLvs5CKPNrvxMXZMwPe5FyJCqFWyg==}
     dev: true
 
   /vue-docgen-api@4.74.1(vue@3.3.4):
