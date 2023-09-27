@@ -18,7 +18,7 @@ const defaults = {
   px: 1,
 } as const;
 
-export const toPixels = (str: string): number | undefined => {
+export const toPixels = (str?: string): number | undefined => {
   if (!str) return undefined;
 
   if (str in defaults) {

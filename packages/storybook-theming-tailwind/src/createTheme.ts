@@ -1,6 +1,7 @@
 import { create as storybookCreate } from "@storybook/theming/create";
 import { type Config } from "tailwindcss";
 import resolveConfig from "tailwindcss/resolveConfig";
+import { toColor } from "./util/toColor";
 import { toPixels } from "./util/toPixels";
 import { type ThemeConfigProperty } from "./util/types";
 
@@ -122,103 +123,127 @@ export const createTheme = (
       fontCode: fromConfig(fontFamily, ["fontCode"], "mono"),
 
       // Color palette
-      colorPrimary: fromConfig(colors, ["colorPrimary", "colorSecondary"], {
-        light: "sky-600",
-        dark: "sky-500",
-      }),
-      colorSecondary: fromConfig(colors, ["colorSecondary"], {
-        light: "sky-600",
-        dark: "sky-500",
-      }),
+      colorPrimary: toColor(
+        fromConfig(colors, ["colorPrimary"], {
+          light: "neutral-900",
+          dark: "neutral-50",
+        }),
+      ),
+      colorSecondary: toColor(
+        fromConfig(colors, ["colorSecondary"], {
+          light: "primary-600",
+          dark: "primary-600",
+        }),
+      ),
 
       // UI
-      appBg: fromConfig(backgroundColor, ["appBg"], {
-        light: "white",
-        dark: "neutral-900",
-      }),
-      appContentBg: fromConfig(backgroundColor, ["appContentBg"], {
-        light: "neutral-50",
-        dark: "neutral-800",
-      }),
-      appBorderColor: fromConfig(borderColor, ["appBorderColor"], {
-        light: "DEFAULT",
-        dark: "neutral-700",
-      }),
+      appBg: toColor(
+        fromConfig(backgroundColor, ["appBg"], {
+          light: "white",
+          dark: "neutral-900",
+        }),
+      ),
+      appContentBg: toColor(
+        fromConfig(backgroundColor, ["appContentBg"], {
+          light: "neutral-50",
+          dark: "neutral-800",
+        }),
+      ),
+      appBorderColor: toColor(
+        fromConfig(borderColor, ["appBorderColor"], {
+          light: "neutral-200",
+          dark: "neutral-700",
+        }),
+      ),
       appBorderRadius: toPixels(
-        fromConfig(borderRadius, ["appBorderRadius"], "lg") ?? "",
+        fromConfig(borderRadius, ["appBorderRadius"], "lg"),
       ),
 
       // Text colors
-      textColor: fromConfig(textColor, ["textColor"], {
-        light: "neutral-900",
-        dark: "neutral-50",
-      }),
-      textInverseColor: fromConfig(textColor, ["textInverseColor", "appBg"], {
-        light: "white",
-        dark: "neutral-900",
-      }),
-      textMutedColor: fromConfig(textColor, ["textMutedColor"], {
-        light: "neutral-500",
-        dark: "neutral-400",
-      }),
-
-      // Toolbar default and active colors
-      barTextColor: fromConfig(textColor, ["barTextColor", "textMutedColor"], {
-        light: "neutral-500",
-        dark: "neutral-400",
-      }),
-      barSelectedColor: fromConfig(
-        textColor,
-        ["barSelectedColor", "textColor"],
-        {
+      textColor: toColor(
+        fromConfig(textColor, ["textColor"], {
           light: "neutral-900",
           dark: "neutral-50",
-        },
+        }),
       ),
-      barBg: fromConfig(backgroundColor, ["barBg", "appContentBg"], {
-        light: "neutral-50",
-        dark: "neutral-800",
-      }),
-
-      // Addons form elements
-      buttonBg: fromConfig(backgroundColor, ["buttonBg", "appBg"], {
-        light: "white",
-        dark: "neutral-900",
-      }),
-      buttonBorder: fromConfig(
-        borderColor,
-        ["buttonBorder", "appBorderColor"],
-        {
-          light: "DEFAULT",
-          dark: "neutral-700",
-        },
-      ),
-      booleanBg: fromConfig(borderColor, ["booleanBg", "appBorderColor"], {
-        light: "DEFAULT",
-        dark: "neutral-700",
-      }),
-      booleanSelectedBg: fromConfig(
-        backgroundColor,
-        ["booleanSelectedBg", "appBg"],
-        {
+      textInverseColor: toColor(
+        fromConfig(textColor, ["textInverseColor", "appBg"], {
           light: "white",
           dark: "neutral-900",
-        },
+        }),
       ),
-      inputBg: fromConfig(backgroundColor, ["inputBg", "appBg"], {
-        light: "white",
-        dark: "neutral-900",
-      }),
-      inputBorder: fromConfig(borderColor, ["inputBorder", "appBorderColor"], {
-        light: "DEFAULT",
-        dark: "neutral-700",
-      }),
-      inputTextColor: fromConfig(textColor, ["inputTextColor", "textColor"], {
-        light: "neutral-900",
-        dark: "neutral-50",
-      }),
+      textMutedColor: toColor(
+        fromConfig(textColor, ["textMutedColor"], {
+          light: "neutral-500",
+          dark: "neutral-400",
+        }),
+      ),
+
+      // Toolbar default and active colors
+      barTextColor: toColor(
+        fromConfig(textColor, ["barTextColor", "textMutedColor"], {
+          light: "neutral-500",
+          dark: "neutral-400",
+        }),
+      ),
+      barSelectedColor: toColor(
+        fromConfig(textColor, ["barSelectedColor", "textColor"], {
+          light: "neutral-900",
+          dark: "neutral-50",
+        }),
+      ),
+      barBg: toColor(
+        fromConfig(backgroundColor, ["barBg", "appContentBg"], {
+          light: "neutral-50",
+          dark: "neutral-800",
+        }),
+      ),
+
+      // Addons form elements
+      buttonBg: toColor(
+        fromConfig(backgroundColor, ["buttonBg", "appBg"], {
+          light: "white",
+          dark: "neutral-900",
+        }),
+      ),
+      buttonBorder: toColor(
+        fromConfig(borderColor, ["buttonBorder", "appBorderColor"], {
+          light: "neutral-200",
+          dark: "neutral-700",
+        }),
+      ),
+      booleanBg: toColor(
+        fromConfig(borderColor, ["booleanBg", "appBorderColor"], {
+          light: "neutral-200",
+          dark: "neutral-700",
+        }),
+      ),
+      booleanSelectedBg: toColor(
+        fromConfig(backgroundColor, ["booleanSelectedBg", "appBg"], {
+          light: "white",
+          dark: "neutral-900",
+        }),
+      ),
+      inputBg: toColor(
+        fromConfig(backgroundColor, ["inputBg", "appBg"], {
+          light: "white",
+          dark: "neutral-900",
+        }),
+      ),
+      inputBorder: toColor(
+        fromConfig(borderColor, ["inputBorder", "appBorderColor"], {
+          light: "neutral-200",
+          dark: "neutral-700",
+        }),
+      ),
+      inputTextColor: toColor(
+        fromConfig(textColor, ["inputTextColor", "textColor"], {
+          light: "neutral-900",
+          dark: "neutral-50",
+        }),
+      ),
       inputBorderRadius: toPixels(
-        fromConfig(borderRadius, ["inputBorderRadius"], "DEFAULT") ?? "",
+        fromConfig(borderRadius, ["inputBorderRadius"], "DEFAULT"),
       ),
     },
     rest,
