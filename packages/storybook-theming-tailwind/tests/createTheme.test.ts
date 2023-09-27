@@ -31,4 +31,26 @@ describe("createTheme", () => {
     expect(theme.appBorderRadius).toEqual(16);
     expect(theme.inputBorderRadius).toEqual(16);
   });
+
+  // Prevents the following error
+  // Uncaught Error: Couldn't parse the color string. Please provide the color as a string in hex, rgb, rgba, hsl or hsla notation.
+  it("needs to filter out indirect color values", () => {
+    const testConfig: Config = {
+      content: [],
+      theme: {
+        colors: {
+          transparent: "transparent",
+          current: "currentColor",
+        },
+      },
+    };
+
+    const theme = createTheme(testConfig, {
+      appBg: "transparent",
+      appBorderColor: "current",
+    });
+
+    expect(theme.appBg).not.toEqual("transparent");
+    expect(theme.appBorderColor).not.toEqual("currentColor");
+  });
 });

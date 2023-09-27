@@ -2,7 +2,7 @@
   "name": "@broet/storybook-theming-tailwind",
   "description": "Create a Storybook theme using your Tailwind config.",
   "author": "Joost Kersjes",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
