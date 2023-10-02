@@ -1,7 +1,9 @@
 {
   "name": "@broet/tailwind-config",
+  "description": "The broet Tailwind config.",
   "author": "Joost Kersjes",
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "license": "MIT",
   "main": "tailwind.config.js",
   "type": "module",
   "types": "config.d.ts",

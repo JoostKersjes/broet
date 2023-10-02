@@ -15,7 +15,7 @@ importers:
   packages/storybook-theming-tailwind:
     devDependencies:
       '@broet/tailwind-config':
-        specifier: workspace:0.0.0
+        specifier: workspace:^
         version: link:../tailwind-config
       '@storybook/theming':
         specifier: ^7.4.5
@@ -42,10 +42,10 @@ importers:
   packages/ui:
     devDependencies:
       '@broet/storybook-theming-tailwind':
-        specifier: workspace:0.2.0
+        specifier: workspace:^
         version: link:../storybook-theming-tailwind
       '@broet/tailwind-config':
-        specifier: workspace:0.0.0
+        specifier: workspace:^
         version: link:../tailwind-config
       '@rushstack/eslint-patch':
         specifier: ^1.3.2
