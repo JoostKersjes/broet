@@ -2,6 +2,7 @@
   "name": "@broet/monorepo",
   "description": "Some libaries for building Vue & Vite apps",
   "author": "Joost Kersjes",
+  "license": "MIT",
   "type": "module",
   "repository": {
     "type": "git",

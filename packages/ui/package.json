@@ -3,6 +3,7 @@
   "description": "The broet Vue component library.",
   "author": "Joost Kersjes",
   "version": "0.0.0",
+  "license": "MIT",
   "type": "module",
   "repository": {
     "type": "git",
@@ -18,8 +19,8 @@
     "preview": "pnpm dlx serve -nL dist"
   },
   "devDependencies": {
-    "@broet/storybook-theming-tailwind": "workspace:0.2.0",
-    "@broet/tailwind-config": "workspace:0.0.0",
+    "@broet/storybook-theming-tailwind": "workspace:^",
+    "@broet/tailwind-config": "workspace:^",
     "@rushstack/eslint-patch": "^1.3.2",
     "@storybook/addon-a11y": "^7.4.5",
     "@storybook/addon-essentials": "^7.4.5",
