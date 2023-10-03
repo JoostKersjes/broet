@@ -5,8 +5,10 @@ defineProps<{
 </script>
 
 <template>
-  <fieldset class="rounded-lg border-2 p-4">
-    <legend class="px-2">{{ legend }}</legend>
+  <fieldset class="rounded-xl border-2 p-4">
+    <legend class="border-2 bg-accent-200 px-2 py-1 text-black shadow-sm">
+      {{ legend }}
+    </legend>
     <slot></slot>
   </fieldset>
 </template>
