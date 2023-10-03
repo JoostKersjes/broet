@@ -65,6 +65,13 @@ export default {
       mono: ['"IBM Plex Mono"', ...defaultTheme.fontFamily.mono],
       sans: ['"Public Sans"', ...defaultTheme.fontFamily.sans],
     },
+    boxShadow: {
+      sm: "2px 2px #000000",
+      DEFAULT: "4px 4px #000000",
+      md: "4px 4px #000000",
+      lg: "8px 8px #000000",
+      xl: "12px 12px #000000",
+    },
     extend: {
       fontSize: {
         sm: "0.800rem",
@@ -74,6 +81,15 @@ export default {
         "3xl": "1.954rem",
         "4xl": "2.442rem",
         "5xl": "3.053rem",
+      },
+      borderRadius: {
+        sm: "0.25rem",
+        DEFAULT: "0.5rem",
+        md: "0.5rem",
+        lg: "0.75rem",
+        xl: "1rem",
+        "2xl": "1.5rem",
+        "3xl": "2rem",
       },
     },
   },
