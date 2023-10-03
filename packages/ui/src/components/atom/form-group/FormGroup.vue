@@ -5,7 +5,7 @@ defineProps<{
 </script>
 
 <template>
-  <fieldset class="border-2 rounded-lg p-4">
+  <fieldset class="rounded-lg border-2 p-4">
     <legend class="px-2">{{ legend }}</legend>
     <slot></slot>
   </fieldset>
