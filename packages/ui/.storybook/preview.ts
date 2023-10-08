@@ -1,4 +1,4 @@
-import { createViewports } from "@broet/storybook-theming-tailwind";
+import { createViewports } from "storybook-tailwind-theming";
 import { type Preview } from "@storybook/vue3";
 import tailwindConfig from "../tailwind.config";
 import { dark, light } from "./themes";

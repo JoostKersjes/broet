@@ -8,6 +8,6 @@ Some libraries for building Vue &amp; Vite apps.
 
 ## 🏗️ In development
 
-- **[storybook-theming-tailwind](./packages/storybook-theming-tailwind/):** Create a Storybook theme using your Tailwind config.
-- **[tailwind-config](./packages/tailwind-config/):** The broet Tailwind config.
-- **[ui](./packages/ui/):** The broet Vue component library.
+- **[storybook-tailwind-theming](./packages/storybook-tailwind-theming/):** Create a Storybook theme using your Tailwind config.
+- **[@broet/tailwind-config](./packages/tailwind-config/):** The broet Tailwind config.
+- **[@broet/ui](./packages/ui/):** The broet Vue component library.

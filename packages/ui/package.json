@@ -19,7 +19,7 @@
     "preview": "pnpm dlx serve -nL dist"
   },
   "devDependencies": {
-    "@broet/storybook-theming-tailwind": "workspace:^",
+    "storybook-tailwind-theming": "workspace:^",
     "@broet/tailwind-config": "workspace:^",
     "@rushstack/eslint-patch": "^1.5.1",
     "@storybook/addon-a11y": "^7.4.6",
