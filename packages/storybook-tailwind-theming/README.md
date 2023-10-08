@@ -1,11 +1,11 @@
-# broet / storybook-theming-tailwind
+# storybook-tailwind-theming
 
 Create a Storybook theme using your Tailwind config.
 
 ## Installation
 
 ```
-pnpm add -D @broet/storybook-theming-tailwind @storybook/manager-api @storybook/theming
+pnpm add -D storybook-tailwind-theming @storybook/manager-api @storybook/theming
 ```
 
 ## Theme
@@ -13,7 +13,7 @@ pnpm add -D @broet/storybook-theming-tailwind @storybook/manager-api @storybook/
 In your project, create a `.storybook/themes.ts` file:
 
 ```typescript
-import { createTheme } from "@broet/storybook-theming-tailwind";
+import { createTheme } from "storybook-tailwind-theming";
 import tailwindConfig from "../tailwind.config";
 
 export const light = createTheme(tailwindConfig, {
@@ -69,7 +69,7 @@ pnpm add -D storybook-dark-mode
 2. Create an extra theme in your `.storybook/themes.ts` file:
 
    ```typescript
-   import { createTheme } from "@broet/storybook-theming-tailwind";
+   import { createTheme } from "storybook-tailwind-theming";
    import tailwindConfig from "../tailwind.config";
 
    const sharedProperties = {
@@ -110,7 +110,7 @@ pnpm add -D storybook-dark-mode
 In your `.storybook/preview.ts` file:
 
 ```typescript
-import { createViewports } from "@broet/storybook-theming-tailwind";
+import { createViewports } from "storybook-tailwind-theming";
 import { type Preview } from "@storybook/vue3";
 import tailwindConfig from "../tailwind.config";
 

@@ -1,4 +1,4 @@
-import { createTheme } from "@broet/storybook-theming-tailwind";
+import { createTheme } from "storybook-tailwind-theming";
 import tailwindConfig from "../tailwind.config";
 
 const sharedProperties = {

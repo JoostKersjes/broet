@@ -1,5 +1,5 @@
 {
-  "name": "@broet/storybook-theming-tailwind",
+  "name": "storybook-tailwind-theming",
   "description": "Create a Storybook theme using your Tailwind config.",
   "author": "Joost Kersjes",
   "version": "0.2.0",
@@ -17,7 +17,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JoostKersjes/broet.git",
-    "directory": "packages/storybook-theming-tailwind"
+    "directory": "packages/storybook-tailwind-theming"
   },
   "scripts": {
     "test": "vitest",
