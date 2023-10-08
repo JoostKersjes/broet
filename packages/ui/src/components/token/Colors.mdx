@@ -1,0 +1,16 @@
+import { ColorPalette, ColorItem, Meta } from "@storybook/blocks";
+import resolveConfig from "tailwindcss/resolveConfig";
+import tailwindConfig from "../../../tailwind.config.js";
+
+export const { theme } = resolveConfig(tailwindConfig);
+
+<Meta title="Tokens/Colors" />
+
+# Colors
+
+<ColorPalette>
+  <ColorItem title="Primary" colors={theme.colors.primary} />
+  <ColorItem title="Secondary" colors={theme.colors.secondary} />
+  <ColorItem title="Accent" colors={theme.colors.accent} />
+  <ColorItem title="Neutral" colors={theme.colors.neutral} />
+</ColorPalette>

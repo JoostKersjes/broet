@@ -15,6 +15,7 @@ const preview: Preview = {
       },
     },
     darkMode: { dark, light, current: "dark" },
+    docs: { theme: light },
     viewport: {
       viewports: createViewports(tailwindConfig),
     },
